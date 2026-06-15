@@ -18,7 +18,8 @@
 <meta name="twitter:title" content="Sabat Law Firm, LLC — Serious legal counsel, in plain English" />
 <meta name="twitter:description" content="Estate planning, probate, real estate & business law for the St. Louis metro and O'Fallon, IL. 5.0★ across 23 Google reviews." />
 <meta name="twitter:image" content="https://atherbilal.github.io/sabat-law-firm/assets/og.jpg" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B2D24'/%3E%3Cpath fill='%23DCBBA0' d='M32 10c-1 4-4 7-8 9 2 0 4-.4 6-1.3-2 4-5.4 6.6-9 8 2.2.4 4.4.2 6.5-.6-2.2 3.8-5.7 6.4-9.6 7.7 2.8.7 5.7.5 8.4-.6-2.4 3.6-6 6-10 7 3 .9 6.2.8 9.2-.4-1.3 2-3 3.6-5 4.8H30v9.7h-6a2 2 0 0 0 0 4h16a2 2 0 0 0 0-4h-6V44c3 1.2 6.2 1.3 9.2.4-2-1.2-3.7-2.8-5-4.8 3 1.2 6.2 1.3 9.2.4-4-1-7.6-3.4-10-7 2.7 1.1 5.6 1.3 8.4.6-3.9-1.3-7.4-3.9-9.6-7.7 2.1.8 4.3 1 6.5.6-3.6-1.4-7-4-9-8 2 .9 4 1.3 6 1.3-4-2-7-5-8-9z'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,7 +96,7 @@ header.scrolled{background:rgba(27,45,36,.97);backdrop-filter:blur(12px);box-sha
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
 /* header defaults to DARK text over the light hero; flips to light when scrolled onto green */
 .brand{display:flex;align-items:center;gap:13px;color:var(--green-800)}
-.brand .tree{width:34px;height:34px;flex-shrink:0;color:var(--cedar-deep);transition:color .4s}
+.brand .tree{width:34px;height:32px;flex-shrink:0;color:var(--green-800);transition:color .4s;background-color:currentColor;-webkit-mask:url(assets/tree.png) center/contain no-repeat;mask:url(assets/tree.png) center/contain no-repeat}
 .brand .name{font-family:"Fraunces";font-size:1.18rem;letter-spacing:.06em;color:var(--green-800);line-height:1;text-transform:uppercase;font-weight:400;transition:color .4s}
 .brand .name small{display:block;font-family:"Hanken Grotesk";font-size:.58rem;letter-spacing:.34em;color:var(--cedar-deep);margin-top:5px;font-weight:500;transition:color .4s}
 .links{display:flex;align-items:center;gap:34px}
@@ -154,7 +155,7 @@ header.scrolled .burger span{background:var(--cream)}
 .badge .g{width:30px;height:30px}
 .badge b{font-family:"Fraunces";font-size:1.3rem;color:var(--green-800);line-height:1;display:block}
 .badge span{font-size:.72rem;color:var(--ink-soft);letter-spacing:.03em}
-.hero-tree{position:absolute;right:-90px;top:40px;width:520px;color:var(--green-800);opacity:.04;z-index:0;pointer-events:none}
+.hero-tree{position:absolute;right:-70px;top:40px;width:520px;height:468px;color:var(--green-800);opacity:.05;z-index:0;pointer-events:none;background-color:currentColor;-webkit-mask:url(assets/tree.png) center/contain no-repeat;mask:url(assets/tree.png) center/contain no-repeat}
 
 /* ============ TRUST MARQUEE ============ */
 .marquee{background:var(--green-800);color:var(--cream);overflow:hidden;border-top:1px solid rgba(220,187,160,.18);border-bottom:1px solid rgba(220,187,160,.18)}
@@ -278,6 +279,9 @@ section{position:relative}
 footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:46px;border-bottom:1px solid rgba(220,187,160,.16)}
 .foot-brand .brand{margin-bottom:18px}
+footer .brand .name{color:var(--cream)}
+footer .brand .name small{color:var(--cedar)}
+footer .brand .tree{color:var(--cedar)}
 .foot-brand p{color:rgba(246,241,231,.62);font-size:.95rem;max-width:34ch}
 .foot-col h4{font-family:"Hanken Grotesk";font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cedar);margin-bottom:18px;font-weight:600}
 .foot-col a,.foot-col p{display:block;color:rgba(246,241,231,.72);font-size:.95rem;margin-bottom:11px;transition:color .25s}
@@ -335,10 +339,7 @@ footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
 <header id="header">
   <div class="wrap nav">
     <a href="#top" class="brand" aria-label="Sabat Law Firm home">
-      <svg class="tree" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
-        <path d="M32 4c-1 4-4 7-8 9 2 0 4-.4 6-1.3-2 4-5.4 6.6-9 8 2.2.4 4.4.2 6.5-.6-2.2 3.8-5.7 6.4-9.6 7.7 2.8.7 5.7.5 8.4-.6-2.4 3.6-6 6-10 7 3 .9 6.2.8 9.2-.4-1.3 2-3 3.6-5 4.8H30v5.7c0 .9-.7 1.6-1.6 1.6H24a2 2 0 0 1 0-4h4v-3.3c-2-.2-4-.7-5.8-1.6 3-1.2 5.6-3.2 7.5-5.8-2.7 1-5.6 1-8.3.2 3.7-1.5 6.8-4.2 8.9-7.7-2.5.8-5.2.9-7.8.2 3.4-1.5 6.3-4 8.3-7.2-2 .7-4.1.9-6.2.5C29 13 31 9 32 4z"/>
-        <path d="M30 50h4v8a2 2 0 0 1-4 0z" opacity=".85"/>
-      </svg>
+      <span class="tree" aria-hidden="true"></span>
       <span class="name">Sabat Law Firm<small>O'FALLON · ST. LOUIS METRO</small></span>
     </a>
     <nav class="links" id="navlinks">
@@ -361,7 +362,7 @@ footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <svg class="hero-tree" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M32 4c-1 4-4 7-8 9 2 0 4-.4 6-1.3-2 4-5.4 6.6-9 8 2.2.4 4.4.2 6.5-.6-2.2 3.8-5.7 6.4-9.6 7.7 2.8.7 5.7.5 8.4-.6-2.4 3.6-6 6-10 7 3 .9 6.2.8 9.2-.4-1.3 2-3 3.6-5 4.8H30v9.7c0 .9-.7 1.6-1.6 1.6H24a2 2 0 0 1 0-4h4V38c-2-.2-4-.7-5.8-1.6 3-1.2 5.6-3.2 7.5-5.8-2.7 1-5.6 1-8.3.2 3.7-1.5 6.8-4.2 8.9-7.7-2.5.8-5.2.9-7.8.2 3.4-1.5 6.3-4 8.3-7.2-2 .7-4.1.9-6.2.5C29 13 31 9 32 4z"/></svg>
+  <span class="hero-tree" aria-hidden="true"></span>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow loc reveal">Serving the Greater St. Louis Metro</span>
@@ -615,7 +616,7 @@ footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="#top" class="brand">
-          <svg class="tree" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M32 4c-1 4-4 7-8 9 2 0 4-.4 6-1.3-2 4-5.4 6.6-9 8 2.2.4 4.4.2 6.5-.6-2.2 3.8-5.7 6.4-9.6 7.7 2.8.7 5.7.5 8.4-.6-2.4 3.6-6 6-10 7 3 .9 6.2.8 9.2-.4-1.3 2-3 3.6-5 4.8H30v9.7c0 .9-.7 1.6-1.6 1.6H24a2 2 0 0 1 0-4h4V38c-2-.2-4-.7-5.8-1.6 3-1.2 5.6-3.2 7.5-5.8-2.7 1-5.6 1-8.3.2 3.7-1.5 6.8-4.2 8.9-7.7-2.5.8-5.2.9-7.8.2 3.4-1.5 6.3-4 8.3-7.2-2 .7-4.1.9-6.2.5C29 13 31 9 32 4z"/></svg>
+          <span class="tree" aria-hidden="true"></span>
           <span class="name">Sabat Law Firm<small>O'FALLON · ST. LOUIS METRO</small></span>
         </a>
         <p>Heartfelt, honest, and genuinely accessible legal counsel for families and businesses across the Greater St. Louis Metropolitan area.</p>
