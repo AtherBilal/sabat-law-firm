@@ -47,7 +47,7 @@
   --maxw:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:96px}
 body{
   font-family:"Hanken Grotesk",system-ui,sans-serif;
   background:var(--cream);
@@ -107,6 +107,7 @@ header.scrolled{background:rgba(27,45,36,.97);backdrop-filter:blur(12px);box-sha
 .nav-phone{color:var(--green-700);font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:.5em;transition:color .4s}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .burger span{width:26px;height:2px;background:var(--green-800);transition:.3s}
+.m-cta{display:none}
 /* scrolled = dark green bar → light text */
 header.scrolled .brand .name,header.scrolled .brand{color:var(--cream)}
 header.scrolled .brand .tree,header.scrolled .brand .name small{color:var(--cedar)}
@@ -304,13 +305,18 @@ footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
 }
 @media(max-width:680px){
   body{font-size:16px}
-  .links,.nav-phone{display:none}
-  .burger{display:flex}
+  header{padding:11px 0}
+  .links,.nav-phone,.nav-cta .btn-cedar{display:none}
+  .burger{display:flex;margin-right:-8px}
+  .brand .name{font-size:1.04rem;white-space:nowrap}
+  .brand .name small{font-size:.52rem;letter-spacing:.24em;margin-top:4px}
+  .brand .tree{width:30px;height:30px}
   header.open .links{
-    display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;
-    background:var(--green-800);padding:24px 28px;gap:20px;box-shadow:var(--shadow);
+    display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--green-800);padding:22px 26px;gap:18px;box-shadow:var(--shadow);
   }
   header.open .links a{color:var(--cream)}
+  header.open .links .m-cta{display:inline-flex;justify-content:center;color:var(--green-900);margin-top:6px}
   .rev-grid{columns:1}
   .steps{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
@@ -340,6 +346,7 @@ footer{background:var(--green-900);color:var(--cream);padding:70px 0 30px}
       <a href="#about">About Anthony</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
+      <a href="#contact" class="m-cta btn btn-cedar">Free Consultation</a>
     </nav>
     <div class="nav-cta">
       <a href="tel:+16185392238" class="nav-phone">
