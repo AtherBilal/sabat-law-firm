@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green-800:#1B2D24;--green-900:#101A14;--cedar:#DCBBA0;--cedar-deep:#C49A78;--cream:#F6F1E7;--ink:#19241D}
+html,body{width:1200px;height:630px;overflow:hidden}
+.card{width:1200px;height:630px;display:flex;background:var(--green-800);position:relative;font-family:"Hanken Grotesk",sans-serif}
+.left{width:600px;padding:64px 56px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.tree{width:54px;height:54px;color:var(--cedar);margin-bottom:26px}
+.eyebrow{font-size:17px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cedar-deep);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--cedar-deep)}
+h1{font-family:"Fraunces",serif;font-weight:380;font-size:58px;line-height:1.04;color:var(--cream);letter-spacing:-.015em}
+h1 em{font-style:italic;color:var(--cedar)}
+.sub{margin-top:22px;font-size:21px;color:rgba(246,241,231,.82);line-height:1.4}
+.meta{margin-top:34px;display:flex;align-items:center;gap:22px}
+.stars{color:#E4B85F;font-size:22px;letter-spacing:3px}
+.meta b{font-family:"Fraunces";color:var(--cream);font-size:22px}
+.meta .dot{width:5px;height:5px;border-radius:50%;background:var(--cedar-deep)}
+.meta span{color:rgba(246,241,231,.8);font-size:18px}
+.right{width:600px;height:630px;position:relative;overflow:hidden}
+.right img{width:100%;height:100%;object-fit:cover;object-position:50% 16%}
+.right::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--green-800) 0%,rgba(27,45,36,.55) 16%,rgba(27,45,36,0) 42%)}
+.right::after{content:"";position:absolute;inset:0;z-index:1;box-shadow:inset 0 0 0 1px rgba(220,187,160,.18)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <svg class="tree" viewBox="0 0 64 64" fill="currentColor"><path d="M32 4c-1 4-4 7-8 9 2 0 4-.4 6-1.3-2 4-5.4 6.6-9 8 2.2.4 4.4.2 6.5-.6-2.2 3.8-5.7 6.4-9.6 7.7 2.8.7 5.7.5 8.4-.6-2.4 3.6-6 6-10 7 3 .9 6.2.8 9.2-.4-1.3 2-3 3.6-5 4.8H30v9.7h-6a2 2 0 0 0 0 4h16a2 2 0 0 0 0-4h-6V38c3 1.2 6.2 1.3 9.2.4-2-1.2-3.7-2.8-5-4.8 3 1.2 6.2 1.3 9.2.4-4-1-7.6-3.4-10-7 2.7 1.1 5.6 1.3 8.4.6-3.9-1.3-7.4-3.9-9.6-7.7 2.1.8 4.3 1 6.5.6-3.6-1.4-7-4-9-8 2 .9 4 1.3 6 1.3-4-2-7-5-8-9z"/></svg>
+    <div class="eyebrow">Sabat Law Firm, LLC</div>
+    <h1>Serious legal counsel, <em>in plain English.</em></h1>
+    <div class="sub">Estate Planning · Probate · Real Estate · Business Law<br>Serving the St. Louis Metro &amp; O'Fallon, IL</div>
+    <div class="meta">
+      <span class="stars">★★★★★</span>
+      <b>5.0</b>
+      <span class="dot"></span>
+      <span>23 Google reviews</span>
+    </div>
+  </div>
+  <div class="right"><img src="assets/anthony-portrait.jpg" alt="Anthony W. Sabat"></div>
+</div>
+</body>
+</html>
